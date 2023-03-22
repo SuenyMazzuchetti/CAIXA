@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Caixa Eletrônico</title>
+</head>
+<body>
+    
+    Digite um valor divisivel por 10:
+    <input type="text" id="valor">
+    <button onclick="sacar();">SACAR</button>
+    <div class="div1" id="div1"></div>
+
+</body>
+
+<script>
+
+    function sacar()
+    {
+        v = valor.value;
+        v = parseInt(v); //converte para inteiro
+        if (v%10==0)
+        {
+            quantidade = v / 10;
+            // Estrutura Repetição
+            for(x=1;x<=quantidade;x++)
+            {
+                div1.innerHTML += "<br> 10 ";
+            }
+        }
+        else
+        {
+            alert("Valor Incorreto");
+        }
+    }
+
+</script>
+
+</html>
